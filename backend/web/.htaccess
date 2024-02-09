@@ -1,0 +1,14 @@
+Options +FollowSymlinks
+IndexIgnore */*
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    RewriteCond %{REQUEST_URI} !^/mnt/(assets|css)/
+    RewriteCond %{REQUEST_URI} ^/mnt
+
+    RewriteRule . index.php
+</IfModule>
