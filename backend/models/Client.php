@@ -3,8 +3,8 @@
 namespace backend\models;
 
 use Yii;
-use app\models\Profile;
-use app\models\Address;
+use backend\models\Profile;
+use backend\models\Address;
 
 /**
  * This is the model class for table "client".
@@ -36,6 +36,11 @@ class Client extends \yii\db\ActiveRecord
             ['email', 'email', 'message' => 'Please enter a valid email.'],
             [['created_at', 'updated_at', 'deleted_at'], 'safe']
         ];
+    }
+
+    public function extraFields()
+    {
+        return ['profile', 'address'];
     }
 
     public function fields()

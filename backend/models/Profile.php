@@ -43,7 +43,7 @@ class Profile extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['first_name', 'last_name', 'phone', 'client_id'], 'required'],
+            [['first_name', 'last_name', 'phone', 'client_id', 'sexo'], 'required'],
             [['first_name', 'last_name', 'phone'], 'string'],
             [['client_id'], 'integer'],
             [['client_id'], 'unique'],
