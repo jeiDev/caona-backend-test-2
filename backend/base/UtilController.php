@@ -9,10 +9,10 @@ class UtilController
             'corsFilter'  => [
                 'class' => \yii\filters\Cors::className(),
                 'cors'  => [
-                    'Origin'                           => ["*"],
-                    'Access-Control-Request-Method'    => ['GET', 'POST', 'PUT', 'DELETE'],
-                    'Access-Control-Allow-Credentials' => false,
-                    'Access-Control-Max-Age'           => 3600,
+                    'Origin' => ["*"],
+                    'Access-Control-Request-Method' => ['*'],
+                    'Access-Control-Allow-Headers' => ['Content-Type'],
+                    'Access-Control-Max-Age' => 3600,     
                 ],
             ]
         ];

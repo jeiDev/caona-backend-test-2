@@ -8,7 +8,6 @@ use backend\base\UtilController;
 class ClientController extends ActiveController
 {
     public $modelClass = 'backend\models\Client';
-    public $enableCsrfValidation = false;
 
     public function behaviors()
     {
